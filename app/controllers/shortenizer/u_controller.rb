@@ -2,8 +2,8 @@ module Shortenizer
   class UController < ApplicationController
 
     def index
-      url = Url.find params[:shortlink]
-      redirect_to url
+      target = Url.find_by(shortlink: params[:shortlink]).target
+      redirect_to target
     end
 
     def new
