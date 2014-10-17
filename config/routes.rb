@@ -1,5 +1,5 @@
 Shortenizer::Engine.routes.draw do
-  match 'u/new', to: 'u#new', via: :get
-  match 'u/create', to: 'u#create', via: :post
-  match 'u/:shortlink', to: 'u#index', via: :get
+  match '/shorten', to: 'u#new', via: :get, as: :new_short_link
+  match '/create', to: 'u#create', via: :post, as: :create_short_link
+  match '/:shortlink', to: 'u#index', via: :get
 end

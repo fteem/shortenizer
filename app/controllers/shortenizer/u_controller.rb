@@ -13,7 +13,7 @@ module Shortenizer
     def create
       @url = Shortenizer::Url.new(url_params)
       if @url.save
-        flash[:message] = "Your URL has been shorten!"
+        flash[:message] = "Your URL has been shortened to: #{build_url(@url.shortlink)}!"
       else
         flash[:message] = "Error motherfucker!"
       end
@@ -24,6 +24,12 @@ module Shortenizer
     private
     def url_params
       params.require(:url).permit(:target, :shortlink)
+    end
+
+    def build_url shortlink
+      host = request.host
+      port = request.port.to_s.empty? ? "" : ":#{request.port}"
+      "#{host}#{port}/#{shortlink}"
     end
 
   end
