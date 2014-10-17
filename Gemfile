@@ -14,3 +14,4 @@ gemspec
 gem 'debugger'
 
 gem 'rspec-rails'
+gem 'better_errors'
