@@ -1,5 +1,5 @@
-<%= form_for :url, url: u_create_path do |f| %>
-  Your link:
+<%= form_for :url, url: u_create_path, html: { class: 'shortenizer-form' } do |f| %>
+  <%= f.label :target, "Your link:" %>
   <%= f.text_field :target %>
   <%= f.submit "Shorten!" %>
 <% end %>

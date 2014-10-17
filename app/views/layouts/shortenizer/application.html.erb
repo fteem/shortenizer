@@ -7,10 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class='shortenizer-wrapper'>
+    <%= flash[:message] if flash[:message] %>
 
-<%= flash[:message] if flash[:message] %>
-
-<%= yield %>
+    <%= yield %>
+  </div>
 
 </body>
 </html>
