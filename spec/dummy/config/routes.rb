@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount Shortenizer::Engine => "/"
+  mount Shortenizer::Engine => "/whatever"
 end

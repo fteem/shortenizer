@@ -27,11 +27,21 @@ module Shortenizer
     end
 
     def build_url shortlink
-      host = request.host
-      port = request.port.to_s.empty? ? "" : ":#{request.port}"
-      raise request.inspect
-      "#{host}#{port}/#{shortlink}"
+      if shortenizer_at_root?
+        "#{request.base_url}/#{shortlink}"
+      else
+        "#{request.base_url}#{shortenizer_mount_point}/#{shortlink}"
+      end
     end
+
+    def shortenizer_mount_point
+      Rails.application.routes.routes.select {|r| r.name == 'shortenizer' }.first.path.spec.inspect
+    end
+
+    def shortenizer_at_root?
+      shortenizer_mount_point == '/'
+    end
+
 
   end
 end
