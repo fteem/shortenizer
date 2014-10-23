@@ -1,3 +1,5 @@
+require_relative 'mount_point'
+
 module Shortenizer
   class Engine < ::Rails::Engine
     isolate_namespace Shortenizer
@@ -11,4 +13,5 @@ module Shortenizer
     end
 
   end
+
 end
