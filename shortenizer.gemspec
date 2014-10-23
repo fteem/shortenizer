@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Ile Eftimov"]
   s.email       = ["ileeftimov@gmail.com"]
   s.homepage    = "https://github.com/fteem/shortenizer"
-  s.summary     = "Mountable URL shortner for your Rails app."
-  s.description = "Easily shortnen links on your Rails application."
+  s.summary     = "Mountable URL shortener for your Rails app."
+  s.description = "Easily shortnen links with your Rails application."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
