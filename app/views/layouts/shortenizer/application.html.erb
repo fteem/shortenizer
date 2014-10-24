@@ -8,7 +8,9 @@
 </head>
 <body>
   <div class='shortenizer-wrapper'>
-    <%= flash[:message] if flash[:message] %>
+    <div class='shortenizer-flash-message'>
+      <%= flash[:message] if flash[:message] %>
+    </div>
 
     <%= yield %>
   </div>

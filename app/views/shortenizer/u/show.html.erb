@@ -1,0 +1,5 @@
+<%= form_for :url, html: { class: 'shortenizer-form' } do |f| %>
+  <%= f.text_field :target, value: @url.full_url %>
+  <%= submit_tag "Copy" %>
+  <%= link_to "New", new_short_link_path, class: 'btn-new' %>
+<% end %>
