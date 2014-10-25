@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 130px;
 }
 
-.shortenizer.form input[type=submit]:hover {
+.shortenizer.form input[type=submit]:hover, .shortenizer.form .btn-copy:hover {
   background-color: #d42a2a;
 }
 
@@ -97,6 +97,10 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
   border: 1px solid #7f898e !important;
+}
+
+.shortenizer.form .btn-new:hover {
+  background-color: #888 !important;
 }
 
 .shortenizer.form .btn-copy {

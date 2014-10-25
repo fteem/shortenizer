@@ -10,8 +10,6 @@ require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 require "shortenizer"
-require 'jquery-rails'
-require 'zeroclipboard-rails'
 
 module Dummy
   class Application < Rails::Application

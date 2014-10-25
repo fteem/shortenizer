@@ -1,4 +1,6 @@
 require_relative 'mount_point'
+require 'jquery-rails'
+require 'zeroclipboard-rails'
 
 module Shortenizer
   class Engine < ::Rails::Engine

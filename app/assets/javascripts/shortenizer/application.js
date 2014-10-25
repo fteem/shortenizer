@@ -15,12 +15,14 @@
 //= require_tree .
 
 $(document).ready(function(){
-  var client = new ZeroClipboard($('#btn-copy'));
+  btn = $('#btn-copy')
+  var client = new ZeroClipboard($(btn));
   client.on( "ready", function( readyEvent ) {
     client.on( "aftercopy", function( event ) {
-      elem = $('#url_target');
-      url = elem.val();
-      elem.val('Link copied to clipboard!');
+      $(btn).text('copied');
+      setTimeout(function(){
+        $(btn).text('copy');
+      }, 3000);
     } );
   } );
 });
