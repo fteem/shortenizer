@@ -16,4 +16,11 @@
 
 $(document).ready(function(){
   var client = new ZeroClipboard($('#btn-copy'));
+  client.on( "ready", function( readyEvent ) {
+    client.on( "aftercopy", function( event ) {
+      elem = $('#url_target');
+      url = elem.val();
+      elem.val('Link copied to clipboard!');
+    } );
+  } );
 });

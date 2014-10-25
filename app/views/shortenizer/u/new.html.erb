@@ -1,4 +1,4 @@
-<%= form_for :url, url: create_short_link_path, html: { class: 'shortenizer-form' } do |f| %>
+<%= form_for :url, url: create_short_link_path, html: { class: 'shortenizer form' } do |f| %>
   <%= f.text_field :target, placeholder: 'Paste a link to shorten it...' %>
   <%= f.submit "Shorten", class: 'btn-shorten' %>
 <% end %>

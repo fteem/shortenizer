@@ -1,6 +1,7 @@
-<%= form_for :url, html: { class: 'shortenizer-form' } do |f| %>
+<%= form_for :url, html: { class: 'shortenizer form' } do |f| %>
   <%= f.text_field :target, value: @url.full_url %>
-  <%= link_to "Copy", '#', class: 'btn-copy', id: 'btn-copy' %>
+  <%= link_to "Copy", '', class: 'btn-copy', id: 'btn-copy', data: { "clipboard-text" => @url.full_url }, onClick: 'return false' %>
   <%= link_to "New", new_short_link_path, class: 'btn-new' %>
 <% end %>
+
 
