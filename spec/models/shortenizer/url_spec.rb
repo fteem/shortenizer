@@ -2,11 +2,11 @@ require 'rails_helper'
 
 describe Shortenizer::Url do
   describe '#append_https' do
-    it 'appends https if link does not begin with http' do
+    it 'appends http if link does not begin with http' do
       url = described_class.create(shortlink: '12345', target: 'yahoo.com')
       url.reload
 
-      expect(url.target).to eq 'https://yahoo.com'
+      expect(url.target).to eq 'http://yahoo.com'
     end
   end
 

@@ -12,7 +12,7 @@ module Shortenizer
 
     def append_https
       unless self.target =~ /http/i
-        self.target = "https://#{self.target}"
+        self.target = "http://#{self.target}"
       end
     end
   end
