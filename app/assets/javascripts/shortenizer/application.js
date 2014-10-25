@@ -10,4 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require zeroclipboard
 //= require_tree .
+
+$(document).ready(function(){
+  var client = new ZeroClipboard($('#btn-copy'));
+});
