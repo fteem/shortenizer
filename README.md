@@ -31,6 +31,9 @@ To view all the routes that this engine has, run:
 
 * If you want to change the style of the form, see the CSS classes used [here](https://github.com/fteem/shortenizer/blob/master/app/assets/stylesheets/shortenizer/application.css).
 
+## To do
+* Add the abiility for the shortener to be used only for authenticated users.
+
 ## Contributing
 
 1. Fork it ( http://github.com/fteem/shortenizer/fork )
